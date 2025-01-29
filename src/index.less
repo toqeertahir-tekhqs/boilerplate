@@ -1,0 +1,43 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: myFirstFont;
+	src: url("/src/assets/Smooch_Sans/SmoochSans-VariableFont_wght.ttf");
+}
+:root {
+	font-family: myFirstFont;
+	line-height: 1.5;
+	font-weight: 400;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@layer base {
+	body {
+		font-family: myFirstFont;
+		background-color: #ffdd35;
+		padding: 0rem;
+		margin: 0rem;
+		color: #41d1ff;
+	}
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #ffdd35 #41d1ff;
+}
+.ant-menu-light.ant-menu-inline .ant-menu-item {
+	margin: 4px 1px;
+	padding-inline: 80px;
+}
+.ant-menu-item-active {
+	margin: 4px 1px;
+}
+.ant-menu-light.ant-menu-root.ant-menu-inline {
+	border-inline-end: 4px solid rgba(0, 0, 0, 0);
+}
