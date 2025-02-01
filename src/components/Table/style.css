@@ -1,0 +1,141 @@
+.light-table .ant-table-tbody > tr > td {
+  /* padding-left: 16px !important; */
+  font-family: inter-reg;
+  color: #444444;
+  background-color: white;
+  font-size: 12px !important;
+}
+.ant-table-wrapper .ant-table-thead > tr > th {
+  /* padding-left: 16px !important; */
+  font-family: inter-reg !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+.light-theme .ant-table-wrapper .ant-table-thead > tr > th {
+  background-color: #f7f7fa !important;
+}
+.dark-theme .ant-table-wrapper .ant-table-thead > tr > th {
+  background-color: #121212 !important;
+}
+.light-pagination .ant-pagination-item a {
+  font-family: inter-reg !important;
+}
+.light-pagination .ant-pagination-prev .ant-pagination-item-link,
+.light-pagination .ant-pagination-next .ant-pagination-item-link {
+  color: black; /* Replace with your desired arrow color */
+}
+
+.light-pagination .ant-pagination-prev .ant-pagination-item-link svg,
+.light-pagination .ant-pagination-next .ant-pagination-item-link svg {
+  fill: black; /* Replace with your desired arrow color */
+}
+.light-pagination .ant-select-selector {
+  background-color: white !important; /* Replace with your desired background color */
+}
+/* .light-pagination .ant-pagination-item-active {
+  font-family: inter-reg;
+  border-color: #2d4dc2; 
+}
+
+.light-pagination .ant-pagination-item-active a {
+  font-family: inter-reg;
+  color: #2d4dc2; 
+} */
+.light-pagination .ant-pagination-item-link {
+  background-color: #f7f7fa !important;
+}
+.ant-pagination.ant-pagination-mini .ant-pagination-options {
+  margin-inline-start: 30px;
+}
+/* .ant-pagination .ant-select-selector {
+  font-family: inter-reg !important;
+  border: 1px solid #444444 !important;
+} */
+/* ////////////////////////////////// */
+.dark-table .ant-table-tbody > tr > td {
+  /* padding-left: 16px !important; */
+  font-family: inter-reg;
+  color: #ebe7e5;
+  background-color: #1f1f1f;
+  font-size: 13px !important;
+}
+.dark-pagination .ant-pagination-prev .ant-pagination-item-link,
+.dark-pagination .ant-pagination-next .ant-pagination-item-link {
+  color: white; /* Replace with your desired arrow color */
+}
+
+.dark-pagination .ant-pagination-prev .ant-pagination-item-link svg,
+.dark-pagination .ant-pagination-next .ant-pagination-item-link svg {
+  fill: white; /* Replace with your desired arrow color */
+}
+.dark-pagination .ant-pagination-item-link {
+  background-color: black !important;
+}
+.dark-pagination .ant-select .ant-select-arrow {
+  color: #939bc9;
+}
+/* .dark-pagination .ant-select-selector {
+  background-color: #939bc9 !important; 
+} */
+
+/* .dark-pagination .ant-table-wrapper .ant-table.ant-table-bordered >.ant-table-container >.ant-table-content >table >tbody>tr>td{
+  background-color: #1F1F1F;
+}
+.dark-pagination .ant-empty-normal .ant-empty-description{
+  color: aqua;
+} */
+.ant-pagination-options .ant-select {
+  color: inherit !important;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.ant-pagination-options svg {
+  fill: inherit;
+}
+.ant-pagination-options .ant-select .ant-select-dropdown,
+.ant-pagination-options .ant-select .ant-select-item-option-content,
+.ant-pagination-options .ant-select-item,
+.ant-pagination-options .ant-pagination-item,
+.ant-pagination-item a {
+  color: inherit !important;
+}
+.ant-pagination-item a {
+  font-size: 13px;
+}
+
+.dark-table.ant-table-wrapper
+  .ant-table.ant-table-bordered.ant-table-small
+  > .ant-table-container
+  > .ant-table-content
+  > table
+  > tbody
+  > tr
+  > td
+  > .ant-table-expanded-row-fixed {
+  background-color: #1f1f1f;
+}
+
+.dark-theme table .ant-empty-normal .ant-empty-description {
+  color: #ebe7e5;
+}
+.ant-table-tbody > tr:last-child > td {
+  border: none;
+}
+.ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before {
+  background-color: unset;
+}
+.dark-table .ant-table-tbody > tr > td {
+  background-color: #181818 !important;
+}
+.ant-table-wrapper .ant-table-column-title {
+  flex: unset;
+  margin-right: 5px;
+}
+.ant-table-column-sorters {
+  justify-content: start !important;
+}

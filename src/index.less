@@ -20,7 +20,7 @@
 @layer base {
 	body {
 		font-family: myFirstFont;
-		background-color: #ffdd35;
+		background-color: #41d1ff;
 		padding: 0rem;
 		margin: 0rem;
 		color: #41d1ff;
@@ -29,7 +29,7 @@
 
 * {
 	scrollbar-width: thin;
-	scrollbar-color: #ffdd35 #41d1ff;
+	scrollbar-color: #002a36 #ffffff;
 }
 .ant-menu-light.ant-menu-inline .ant-menu-item {
 	margin: 4px 1px;
@@ -39,5 +39,13 @@
 	margin: 4px 1px;
 }
 .ant-menu-light.ant-menu-root.ant-menu-inline {
-	border-inline-end: 4px solid rgba(0, 0, 0, 0);
+	border-inline-end: 4px solid #00000000;
+}
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title:hover {
+	background-color: #efe8d7 !important;
+	color: #002a36 !important;
+}
+.ant-result-extra {
+	display: flex;
+	justify-content: center;
 }
