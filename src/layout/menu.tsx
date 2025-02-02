@@ -13,19 +13,19 @@ const MenuAntD = () => {
     const navigate = useNavigate()
     const items: MenuItem[] = [
         {
-            key: '/login',
+            key: '/',
             icon: <MailOutlined />,
-            label: 'Login',
+            label: 'Home',
             onClick: () => {
-                navigate('/login')
+                navigate('/')
             }
         },
         {
-            key: 'page2',
+            key: '/table-test',
             icon: <CalendarOutlined />,
             label: 'Navigation Two',
             onClick: () => {
-                navigate('/page2')
+                navigate('/table-test')
             }
         },
         {
