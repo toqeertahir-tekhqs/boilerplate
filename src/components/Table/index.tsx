@@ -11,7 +11,7 @@ const Table = ({
   rowsPerPage,
   totalRecord,
   setPageNumber,
-  setRowsPerPage,
+  // setRowsPerPage,
   setSortOrder,
   loading,
 }: any) => {
@@ -69,7 +69,7 @@ const Table = ({
     return originalElement;
   };
 
-  const onChange = (pagination: any, filters: any, sorter: any, extra: any) => {
+  const onChange = (pagination: any, filters: any, sorter: any) => {
     setPageNumber(pagination.current);
     // setRowsPerPage(pagination.pageSize);
     setSortOrder(sorter);
@@ -121,7 +121,7 @@ const Table = ({
                   align: "end",
                   responsive: true,
                   showLessItems: true,
-                  onShowSizeChange: (current, size) => {
+                  onShowSizeChange: () => {
                     // setRowsPerPage(size);
                     setPageNumber(1);
                   },

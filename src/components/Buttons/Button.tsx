@@ -11,6 +11,7 @@ const ButtonAntD = ({
   loading,
   iconPosition,
   disabled,
+  size,
   ...props
 }: any) => {
   return (
@@ -19,6 +20,7 @@ const ButtonAntD = ({
       icon={icon}
       iconPosition={iconPosition}
       htmlType={htmlType}
+      size={size}
       className={`${className} no-shadow-button fontNumber font-normal w-full h-[30px] sm:h-[40px]`}
       onClick={onClick}
       loading={loading}

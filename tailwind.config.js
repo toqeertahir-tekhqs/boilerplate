@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {},
 		fontFamily: {
-			defaultFontFamily: ["myFirstFont"],
+			defaultFontFamily: ["Sora"],
 		},
 	},
 	plugins: [],

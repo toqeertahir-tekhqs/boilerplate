@@ -28,29 +28,29 @@ const CustomDrawer: React.FC<CustomDrawerProps> = ({
   return (
     <Drawer
       title={
-        <span className=" text-white text-center text-[18px]">{title}</span>
+        <span className=" text-[#101828] text-[18px]">{title}</span>
       }
       onClose={onClose}
       open={open}
       width={width}
       style={{
-        borderRadius: "10px 10px 0px 0px",
-        backgroundColor: "#0B89CA",
-        maxWidth: 480,
+        borderRadius: "0px 0px 0px 0px",
+        backgroundColor: "#ffffff",
+        // maxWidth: 1024,
         margin: 'auto'
 
       }}
       height={height}
       placement={placement}
       extra={extra}
-      closeIcon={<CloseOutlined style={{ color: "white", fontSize: "18px" }} />}
+      closeIcon={<CloseOutlined style={{ color: "#101828", fontSize: "18px" }} />}
     >
       {children}
       <style>{`
         .ant-drawer .ant-drawer-header {
-          background: #0B89CA !important; /* Slightly darker for contrast */
+          background: #ffffff !important;
           padding: 16px;
-          border-bottom: 1px solid #EFE8D7;
+          border-bottom: 1px solid #F2F2F2;
           position: relative;
         }
 
@@ -60,7 +60,7 @@ const CustomDrawer: React.FC<CustomDrawerProps> = ({
         }
 
         .ant-drawer .ant-drawer-header {
-          text-align: center;
+          text-align: start;
         }
           .ant-drawer-close{
           position: absolute;

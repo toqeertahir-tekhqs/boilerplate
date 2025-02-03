@@ -1,5 +1,5 @@
 import { Modal } from 'antd';
-
+import { IoClose } from "react-icons/io5";
 
 type Props = {
   title: string;
@@ -10,9 +10,13 @@ type Props = {
   okText?: string;
   cancelButtonProps?: object | undefined;
   okButtonProps?: object | undefined;
+  closeIcon?: JSX.Element
 };
 
-const ModelGeneric = ({ title, body, onCancel, onSubmit, width = 520, okText }: Props) => (
+const ModelGeneric = ({
+  title, body, onCancel, onSubmit, width = 520, okText,
+  closeIcon = <IoClose color='#667085' size={20} />
+}: Props) => (
   <Modal
     className="modal-generic"
     title={title}
@@ -22,9 +26,7 @@ const ModelGeneric = ({ title, body, onCancel, onSubmit, width = 520, okText }: 
     centered
     width={width}
     closeIcon={
-      <div>
-        <></>
-      </div>
+      closeIcon
     }
     onOk={() => onSubmit()}
     okText={okText}>
