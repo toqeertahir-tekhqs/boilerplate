@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Table as AntDTable } from "antd";
+import { Table as AntDTable, Button } from "antd";
 import { useRef, useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import "./style.less";
@@ -45,24 +45,14 @@ const Table = ({
     if (type === "prev") {
       return (
         <div className="flex items-center justify-center h-full">
-          <SlArrowLeft
-            className="w-[12px] h-[12px]"
-            style={{
-              color: "#D88E7D",
-            }}
-          />
+          <Button type='default' >Previous</Button>
         </div>
       );
     }
     if (type === "next") {
       return (
         <div className="flex items-center justify-center h-full">
-          <SlArrowRight
-            className="w-[12px] h-[12px]"
-            style={{
-              color: "#D88E7D",
-            }}
-          />
+          <Button type='default' >Next</Button>
         </div>
       );
     }
@@ -112,13 +102,13 @@ const Table = ({
                   current: pageNumber,
                   pageSize: rowsPerPage,
                   total: totalRecord,
+                  showTotal: (total, range) => (<>Page {total} of {total}</>),
                   showSizeChanger: false,
-                  // showQuickJumper:true,
                   hideOnSinglePage: totalRecord > 10 ? false : true,
                   size: "default",
-
-                  // position: ['bottomCenter'],
-                  align: "end",
+                  showTitle: false,
+                  position: ['bottomLeft'],
+                  // align: "center",
                   responsive: true,
                   showLessItems: true,
                   onShowSizeChange: () => {
@@ -127,18 +117,20 @@ const Table = ({
                   },
                   itemRender: itemRender,
                   style: {
-                    fill: "#D88E7D",
-                    color: "#D88E7D",
+                    fill: "#344054",
+                    color: "#344054",
+                    marginLeft: '12px',
+                    marginRight: '12px'
                   },
                   className: "pagination",
                 }}
               />
             </div>
-          </div>
-        </div>
+          </div >
+        </div >
         {scrolltoLeft && (
           <div
-            className="sm:hidden block absolute top-[50%] left-0 cursor-pointer text-black bg-[#D88E7D] rounded-[100%] flex justify-center items-center w-[20px] h-[20px] animate-pulse"
+            className="sm:hidden block absolute top-[50%] left-0 cursor-pointer text-black bg-[#344054] rounded-[100%] flex justify-center items-center w-[20px] h-[20px] animate-pulse"
             onClick={scrollToLeft}
           >
             <SlArrowLeft
@@ -148,19 +140,21 @@ const Table = ({
             />
           </div>
         )}
-        {scrolltoRight && (
-          <div
-            className="sm:hidden block absolute top-[50%] right-0 cursor-pointer text-black bg-[#D88E7D] rounded-[100%] flex justify-center items-center w-[20px] h-[20px] animate-pulse"
-            onClick={scrollToRight}
-          >
-            <SlArrowRight
-              style={{
-                fontSize: "10px",
-              }}
-            />
-          </div>
-        )}
-      </div>
+        {
+          scrolltoRight && (
+            <div
+              className="sm:hidden block absolute top-[50%] right-0 cursor-pointer text-black bg-[#344054] rounded-[100%] flex justify-center items-center w-[20px] h-[20px] animate-pulse"
+              onClick={scrollToRight}
+            >
+              <SlArrowRight
+                style={{
+                  fontSize: "10px",
+                }}
+              />
+            </div>
+          )
+        }
+      </div >
     </>
   );
 };
