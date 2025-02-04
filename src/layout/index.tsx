@@ -23,11 +23,10 @@ const Layout = ({
 
                 {/* Page Content */}
                 <div
-                    className="h-[calc(100vh-173px)] overflow-y-auto mx-10 my-10 border-solid border-[6px] border-[#FCFCFD] bg-[#FCFCFD] rounded-lg"
+                    className="max-h-[calc(100vh-173px)] overflow-y-auto mx-10 my-10 border-solid border-[6px] border-[#FCFCFD] bg-[#FCFCFD] rounded-lg"
                     style={{
                         scrollbarWidth: "none",
                         boxShadow: '0px 1px 3px 1px #1018281A'
-
                     }}
                 >
                     {children}

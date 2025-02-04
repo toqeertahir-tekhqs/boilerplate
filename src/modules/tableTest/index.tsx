@@ -304,7 +304,7 @@ const Index = () => {
                         console.log('Confirmed action');
                         setIsConfirmModalOpen(false);
                     }}
-                    body={<p className='text-[#475467]'>Are you sure you want to proceed?</p>}
+                    body={<p className='text-[#475467]'>Remove a chit fund along with all its details, including transactions and participant records.</p>}
                 />
             </>
         </div>
