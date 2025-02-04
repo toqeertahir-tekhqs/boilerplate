@@ -10,12 +10,15 @@ type Props = {
   okText?: string;
   cancelButtonProps?: object | undefined;
   okButtonProps?: object | undefined;
-  closeIcon?: JSX.Element
+  closeIcon?: JSX.Element;
+  maskClosable?: boolean,
+
 };
 
 const ModelGeneric = ({
   title, body, onCancel, onSubmit, width = 520, okText,
-  closeIcon = <IoClose color='#667085' size={20} />
+  closeIcon = <IoClose color='#667085' size={20} />,
+  maskClosable
 }: Props) => (
   <Modal
     className="modal-generic"
@@ -25,6 +28,7 @@ const ModelGeneric = ({
     footer={null}
     centered
     width={width}
+    maskClosable={maskClosable}
     closeIcon={
       closeIcon
     }

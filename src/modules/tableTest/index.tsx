@@ -1,7 +1,9 @@
 import { Divider } from 'antd';
-import Button from 'components/Buttons/Button';
-import ModelGeneric from 'components/modal/ModelGeneric';
+import { brytAssets } from 'assets';
+import { default as Button } from 'components/Buttons/Button';
+import ConfirmModal from 'components/modal/ModalConfirm';
 import Table from 'components/Table/index';
+import { useState } from 'react';
 import { FiDownload } from "react-icons/fi";
 
 const Index = () => {
@@ -39,9 +41,9 @@ const Index = () => {
             key: 'address',
         },
     ];
-    const modalBody = () => (
-        <>ssas</>
-    )
+
+    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
+
     return (
         <div className='h-[-webkit-fill-available]'>
             <div className='flex justify-between items-center min-h-[83px] px-5'>
@@ -66,23 +68,34 @@ const Index = () => {
                 </div>
                 <div>
                     <Button
-                        title='Export'
-                        icon={<FiDownload size={14} />}
-                        onClick={() => { }}
-                        iconPosition={'start'}
+                        onClick={() => setIsConfirmModalOpen(true)} title='Show Confirm Modal'
                     />
                 </div>
             </div>
             <Divider className='bg-[#EAECF0] my-0' />
 
             <Table columns={columns} data={dataSource} />
-            <ModelGeneric
-                title="sss"
-                width={1500}
-                body={modalBody}
-                onCancel={() => { }}
-                onSubmit={() => { }}
-            />
+            <>
+                <ConfirmModal
+                    open={isConfirmModalOpen}
+                    title={<span className='text-[#101828]'>Confirm</span>}
+                    okText="OK"
+                    okButtonProps={
+                        {
+                            style: { backgroundColor: '#D92D20', borderColor: '#D92D20', color: '#ffffff' },
+                            className: 'custom-ok-button',
+                        }
+                    }
+                    cancelText="Cancel"
+                    onCancel={() => setIsConfirmModalOpen(false)}
+                    icon={<img src={brytAssets.TrashLogo} alt="trash" />}
+                    onOk={() => {
+                        console.log('Confirmed action');
+                        setIsConfirmModalOpen(false);
+                    }}
+                    body={<p className='text-[#475467]'>Are you sure you want to proceed?</p>}
+                />
+            </>
         </div>
     );
 }
