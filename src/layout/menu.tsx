@@ -71,9 +71,11 @@ const MenuAntD = () => {
             <div>
                 <img src={brytAssets.BrytLogo} alt="Bryt Logo" />
             </div>
-            <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items}
-                theme="light"
-            />
+            <div className='max-md:hidden'>
+                <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items}
+                    theme="light"
+                />
+            </div>
             <div className="flex gap-5 items-center">
                 <div>
                     <LuSettings size={20} />
