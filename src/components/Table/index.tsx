@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Table as AntDTable, Button } from "antd";
+import { Table as AntDTable } from "antd";
 import { useRef, useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import "./style.less";
@@ -45,14 +45,22 @@ const Table = ({
     if (type === "prev") {
       return (
         <div className="flex items-center justify-center h-full">
-          <Button type='default' >Previous</Button>
+          <SlArrowLeft
+            style={{
+              fontSize: "10px",
+            }}
+          />
         </div>
       );
     }
     if (type === "next") {
       return (
         <div className="flex items-center justify-center h-full">
-          <Button type='default' >Next</Button>
+          <SlArrowRight
+            style={{
+              fontSize: "10px",
+            }}
+          />
         </div>
       );
     }
@@ -102,12 +110,11 @@ const Table = ({
                   current: pageNumber,
                   pageSize: rowsPerPage,
                   total: totalRecord,
-                  showTotal: (total, range) => (<>Page {total} of {total}</>),
                   showSizeChanger: false,
                   hideOnSinglePage: totalRecord > 10 ? false : true,
                   size: "default",
                   showTitle: false,
-                  position: ['bottomLeft'],
+                  position: ['bottomRight'],
                   // align: "center",
                   responsive: true,
                   showLessItems: true,
