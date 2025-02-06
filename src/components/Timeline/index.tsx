@@ -1,12 +1,9 @@
 import { Timeline } from "antd";
 import React from "react";
 
-interface TimelineItem {
-  children: React.ReactNode;
-}
-
 interface CustomTimelineProps {
-  items: TimelineItem[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  items: any[];
 }
 
 const CustomTimeline: React.FC<CustomTimelineProps> = ({ items }) => {
