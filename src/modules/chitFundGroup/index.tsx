@@ -37,87 +37,8 @@ const Index = () => {
             name: 'John',
             age: 42,
             address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
+        },
+        {
             key: '2',
             name: 'John',
             age: 42,
@@ -128,122 +49,25 @@ const Index = () => {
             name: 'John',
             age: 42,
             address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }, {
+        },
+        {
             key: '2',
             name: 'John',
             age: 42,
             address: '10 Downing Street',
         },
+        {
+            key: '2',
+            name: 'John',
+            age: 42,
+            address: '10 Downing Street',
+        },
+        {
+            key: '2',
+            name: 'John',
+            age: 42,
+            address: '10 Downing Street',
+        }
     ];
 
     const columns = [
