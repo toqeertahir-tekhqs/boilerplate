@@ -1,11 +1,9 @@
+import { MoreOutlined } from '@ant-design/icons';
 import { Divider } from 'antd';
-import { brytAssets } from 'assets';
 import { default as Button } from 'components/Buttons/Button';
-import ConfirmModal from 'components/modal/ModalConfirm';
 import Table from 'components/Table/index';
 import TableHeader from 'components/TableHeader';
 import Tag from 'components/Tag';
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiDownload } from "react-icons/fi";
 
@@ -15,80 +13,112 @@ const Index = () => {
         mainHeader: string;
         subHeader: string;
         exportButton: string;
+        tagTitle: string;
     };
-
-    const { mainHeader, subHeader, exportButton } = chitFundGroup;
-    console.log(mainHeader);
+    const { mainHeader, subHeader, exportButton, tagTitle } = chitFundGroup;
     const dataSource = [
         {
             key: '1',
-            name: 'Mike',
-            age: 32,
-            address: '10 Downing Street',
+            groupName: 'Mike',
+            status: 'Completed',
+            participants: '15/20',
+            contributionAmount: '₹ 300/month',
+            startDate: '01-Jan-2024',
+            endDate: '31-Jan-2024',
+            actions: ':'
         },
         {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
+            key: '1',
+            groupName: 'Mike',
+            status: 'Completed',
+            participants: '15/20',
+            contributionAmount: '₹ 300/month',
+            startDate: '01-Jan-2024',
+            endDate: '31-Jan-2024',
+            actions: ':'
+        }, {
+            key: '1',
+            groupName: 'Mike',
+            status: 'Completed',
+            participants: '15/20',
+            contributionAmount: '₹ 300/month',
+            startDate: '01-Jan-2024',
+            endDate: '31-Jan-2024',
+            actions: ':'
+        }, {
+            key: '1',
+            groupName: 'Mike',
+            status: 'Completed',
+            participants: '15/20',
+            contributionAmount: '₹ 300/month',
+            startDate: '01-Jan-2024',
+            endDate: '31-Jan-2024',
+            actions: ':'
+        }, {
+            key: '1',
+            groupName: 'Mike',
+            status: 'Completed',
+            participants: '15/20',
+            contributionAmount: '₹ 300/month',
+            startDate: '01-Jan-2024',
+            endDate: '31-Jan-2024',
+            actions: ':'
+        }, {
+            key: '1',
+            groupName: 'Mike',
+            status: 'Completed',
+            participants: '15/20',
+            contributionAmount: '₹ 300/month',
+            startDate: '01-Jan-2024',
+            endDate: '31-Jan-2024',
+            actions: ':'
         },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        }
     ];
 
     const columns = [
         {
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
+            title: 'Group Name',
+            dataIndex: 'groupName',
+            key: 'groupName',
         },
         {
-            title: 'Age',
-            dataIndex: 'age',
-            key: 'age',
+            title: 'Status',
+            dataIndex: 'status',
+            key: 'status',
         },
         {
-            title: 'Address',
-            dataIndex: 'address',
-            key: 'address',
+            title: 'Participants',
+            dataIndex: 'participants',
+            key: 'participants',
+        },
+        {
+            title: 'Contribution Amount',
+            dataIndex: 'contributionAmount',
+            key: 'contributionAmount',
+        },
+        {
+            title: 'Start Date',
+            dataIndex: 'startDate',
+            key: 'startDate',
+        },
+        {
+            title: 'End Date',
+            dataIndex: 'endDate',
+            key: 'endDate',
+        },
+        {
+            title: 'Actions',
+            dataIndex: 'actions',
+            key: 'actions',
+            render: () => (
+                <>
+                    <MoreOutlined />
+                </>
+            )
         },
     ];
 
-    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
+    // const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 
     return (
         <div className='h-[-webkit-fill-available]'>
@@ -98,19 +128,11 @@ const Index = () => {
                 onClick={() => { }}
                 iconPosition={'start'}
             />}
-                tag={<Tag color="#DFF8FF" title='119 Active Chit Funds' />}
+                tag={<Tag color="#DFF8FF" title={tagTitle} />}
             />
             <Divider className='bg-[#EAECF0] my-0' />
-
-            <TableHeader mainHeader={mainHeader} subHeader={subHeader} button={<Button
-                onClick={() => setIsConfirmModalOpen(true)} title='Show Confirm Modal'
-            />}
-                tag={<Tag color="#DFF8FF" title='119 Active Chit Funds' />}
-            />
-            <Divider className='bg-[#EAECF0] my-0' />
-
             <Table columns={columns} data={dataSource} />
-            <>
+            {/* <>
                 <ConfirmModal
                     open={isConfirmModalOpen}
                     title={<span className='text-[#101828]'>Confirm</span>}
@@ -130,7 +152,7 @@ const Index = () => {
                     }}
                     body={<p className='text-[#475467]'>Remove a chit fund along with all its details, including transactions and participant records.</p>}
                 />
-            </>
+            </> */}
         </div>
     );
 }

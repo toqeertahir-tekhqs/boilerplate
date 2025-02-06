@@ -66,7 +66,7 @@ function App() {
               headerSortHoverBg: "#FCFCFD",
               headerSortActiveBg: "#FCFCFD",
               rowExpandedBg: "#FCFCFD",
-              fontSize: 16,
+              fontSize: 14,
               fontWeightStrong: 600,
               headerBorderRadius: 0,
               // backgroundColor: "#000000",

@@ -13,7 +13,7 @@ const Index = ({
         tag?: JSX.Element;
     }) => {
     return (
-        <><div className='flex justify-between items-center min-h-[83px] px-5'>
+        <><div className='flex justify-between items-center min-h-[83px] px-3'>
             <div>
                 <div>
                     <div className='text-[18px] font-semibold flex gap-3'>

@@ -1,7 +1,30 @@
 {
 	"ChitFundGroup": {
 		"mainHeader": "KYC & AML Compliance",
+		"tagTitle": "Active Chit Funds",
 		"subHeader": "Keep track of all the KYCs.",
+		"exportButton": "Export"
+	},
+	"Transactions": {
+		"mainHeader": "Transactions",
+		"subHeader": "Keep track of all the transactions.",
+		"exportButton": "Export",
+		"tagTitle": "Active Transactions"
+	},
+	"SmartContracts": {
+		"mainHeader": "Smart Contracts",
+		"subHeader": "Keep track of all the Smart Contracts.",
+		"exportButton": "Export",
+		"tagTitle": "Active Smart Contracts"
+	},
+	"KYCCompliance": {
+		"mainHeader": "KYC Compliance",
+		"subHeader": "Keep track of all the KYCs.",
+		"exportButton": "Export"
+	},
+	"DisputeResolution": {
+		"mainHeader": "Dispute Resolution ",
+		"subHeader": "Keep track of all the Disputes",
 		"exportButton": "Export"
 	}
 }

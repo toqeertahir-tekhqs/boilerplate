@@ -39,9 +39,9 @@ const MenuAntD = () => {
             }
         },
         {
-            // label: 'Navigation Three - Submenu',
+            label: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
             key: 'SubMenuitems',
-            icon: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
+            // icon: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
             children: [
                 {
                     label: 'Smart Contracts',
@@ -51,7 +51,7 @@ const MenuAntD = () => {
                     }
                 },
                 {
-                    label: 'KYC/AML Compliance',
+                    label: 'KYC Compliance',
                     key: '/kyc-compliance',
                     onClick: () => {
                         navigate('/kyc-compliance')
@@ -71,9 +71,9 @@ const MenuAntD = () => {
     const items_md: MenuItem[] = [
 
         {
-            // label: 'Navigation Three - Submenu',
+            label: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
             key: 'SubMenuitems',
-            icon: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
+            // icon: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
             children: [
                 {
                     label: 'Dashboard',
@@ -104,7 +104,7 @@ const MenuAntD = () => {
                     }
                 },
                 {
-                    label: 'KYC/AML Compliance',
+                    label: 'KYC Compliance',
                     key: '/kyc-compliance',
                     onClick: () => {
                         navigate('/kyc-compliance')
