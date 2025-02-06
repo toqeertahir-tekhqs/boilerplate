@@ -42,7 +42,7 @@ const TextField: React.FC<TextFieldProps> = ({
   errorMessage,
   ...rest
 }) => {
-  const [focused, setFocused] = useState<boolean>(false);
+  const [_focused, setFocused] = useState<boolean>(false);
 
   const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     setFocused(value !== "");
