@@ -3,18 +3,22 @@ import { brytAssets } from 'assets';
 import { default as Button } from 'components/Buttons/Button';
 import ConfirmModal from 'components/modal/ModalConfirm';
 import Table from 'components/Table/index';
+import TableHeader from 'components/TableHeader';
+import Tag from 'components/Tag';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiDownload } from "react-icons/fi";
 
 const Index = () => {
     const { t } = useTranslation();
-    const validationSchema = t('Label', { returnObjects: true }) as {
-        password: string;
+    const validationSchema = t('ChitFundGroup', { returnObjects: true }) as {
+        mainHeader: string;
+        subHeader: string;
+        exportButton: string;
     };
 
-    const password = validationSchema.password;
-    console.log(password);
+    const { mainHeader, subHeader, exportButton } = validationSchema;
+    console.log(mainHeader);
     const dataSource = [
         {
             key: '1',
@@ -264,32 +268,21 @@ const Index = () => {
 
     return (
         <div className='h-[-webkit-fill-available]'>
-            <div className='flex justify-between items-center min-h-[83px] px-5'>
-                <div>
-                    <div>KYC & AML Compliance</div>
-                    <div>Keep track of all the KYCs.</div>
-                </div>
-                <div>
-                    <Button
-                        title='Export'
-                        icon={<FiDownload size={14} />}
-                        onClick={() => { }}
-                        iconPosition={'start'}
-                    />
-                </div>
-            </div>
+            <TableHeader mainHeader={mainHeader} subHeader={subHeader} button={<Button
+                title={exportButton}
+                icon={<FiDownload size={14} />}
+                onClick={() => { }}
+                iconPosition={'start'}
+            />}
+                tag={<Tag color="#DFF8FF" title='119 Active Chit Funds' />}
+            />
             <Divider className='bg-[#EAECF0] my-0' />
-            <div className='flex justify-between items-center min-h-[83px] px-5'>
-                <div>
-                    <div>KYC & AML Compliance</div>
-                    <div>Keep track of all the KYCs.</div>
-                </div>
-                <div>
-                    <Button
-                        onClick={() => setIsConfirmModalOpen(true)} title='Show Confirm Modal'
-                    />
-                </div>
-            </div>
+
+            <TableHeader mainHeader={mainHeader} subHeader={subHeader} button={<Button
+                onClick={() => setIsConfirmModalOpen(true)} title='Show Confirm Modal'
+            />}
+                tag={<Tag color="#DFF8FF" title='119 Active Chit Funds' />}
+            />
             <Divider className='bg-[#EAECF0] my-0' />
 
             <Table columns={columns} data={dataSource} />

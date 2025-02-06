@@ -1,5 +1,7 @@
 {
-	"Label": {
-		"password": "Password"
+	"ChitFundGroup": {
+		"mainHeader": "KYC & AML Compliance",
+		"subHeader": "Keep track of all the KYCs.",
+		"exportButton": "Export"
 	}
 }

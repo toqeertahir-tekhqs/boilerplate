@@ -1,7 +1,6 @@
 import Login from 'modules/auth';
 import Forget from 'modules/auth/forget';
-import ForgetCopy from 'modules/authcopy/forget';
-import TableTest from 'modules/tableTest';
+import ChitFundGroup from 'modules/chitFundGroup';
 import PageNotFound from 'modules/pageNotFound';
 import { RouteConfig } from "type/types";
 import { routes } from "./route";
@@ -23,13 +22,8 @@ export const AllRoutes: RouteConfig[] = [
     isPrivate: true,
   },
   {
-    path: routes.ROUTE_FORGET_COPY,
-    page: <ForgetCopy />,
-    isPrivate: true,
-  },
-  {
-    path: routes.ROUTE_TABLE_TEST,
-    page: <TableTest />,
+    path: routes.ROUTE_CHIT_FUNDS_GROUPS,
+    page: <ChitFundGroup />,
     isPrivate: true,
   },
   {

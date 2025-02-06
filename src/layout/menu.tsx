@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const MenuAntD = () => {
     type MenuItem = Required<MenuProps>['items'][number];
 
-    const [current, setCurrent] = useState(location.pathname || '/table-test');
+    const [current, setCurrent] = useState(location.pathname || '/');
     const navigate = useNavigate()
 
     const onClick: MenuProps['onClick'] = (e) => {
@@ -19,9 +19,9 @@ const MenuAntD = () => {
     const items: MenuItem[] = [
         {
             label: 'Dashboard',
-            key: '/table-test',
+            key: '/',
             onClick: () => {
-                navigate('/table-test')
+                navigate('/')
             }
         },
         {
@@ -77,9 +77,9 @@ const MenuAntD = () => {
             children: [
                 {
                     label: 'Dashboard',
-                    key: '/table-test',
+                    key: '/',
                     onClick: () => {
-                        navigate('/table-test')
+                        navigate('/')
                     }
                 },
                 {
