@@ -74,7 +74,7 @@ const Login = () => {
                 })
                 .catch((res) => {
                     ToastNotification(
-                        "success",
+                        "error",
                         res?.response?.data?.message || invalidUserText
                     );
                     setLoading(false);
