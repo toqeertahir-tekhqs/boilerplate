@@ -11,13 +11,13 @@ import { FiDownload } from "react-icons/fi";
 
 const Index = () => {
     const { t } = useTranslation();
-    const validationSchema = t('ChitFundGroup', { returnObjects: true }) as {
+    const chitFundGroup = t('ChitFundGroup', { returnObjects: true }) as {
         mainHeader: string;
         subHeader: string;
         exportButton: string;
     };
 
-    const { mainHeader, subHeader, exportButton } = validationSchema;
+    const { mainHeader, subHeader, exportButton } = chitFundGroup;
     console.log(mainHeader);
     const dataSource = [
         {
