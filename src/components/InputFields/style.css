@@ -23,7 +23,7 @@
 	position: absolute;
 	left: 1px;
 	top: 50%;
-	font-family: "IBM Plex Mono", monospace;
+	font-family: "Sora";
 	transform: translateY(-50%);
 	transition: all 0.2s ease;
 	pointer-events: none;
@@ -49,9 +49,9 @@
 .floating-label-input label.focused {
 	top: 0;
 	left: 1px;
-	font-family: "IBM Plex Mono", monospace;
+	font-family: "Sora";
 	font-size: 10px;
-	color: #0b89ca;
+	color: #d68776;
 	font-weight: 500;
 }
 

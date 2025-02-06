@@ -6,7 +6,7 @@ import "./style.css";
 // Define the prop types for TextField
 interface TextFieldProps {
   id: string;
-  label?: string;
+  label?: string | JSX.Element;
   type: string;
   name: string;
   value: string;
@@ -19,6 +19,7 @@ interface TextFieldProps {
   error?: boolean;
   shrink?: boolean;
   errorMessage?: string;
+  maxLength?: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
@@ -26,7 +27,6 @@ interface TextFieldProps {
 const TextField: React.FC<TextFieldProps> = ({
   id,
   label,
-  type,
   name,
   value,
   disabled,
@@ -37,6 +37,8 @@ const TextField: React.FC<TextFieldProps> = ({
   required,
   shrink,
   error,
+  type = 'text',
+  maxLength,
   errorMessage,
   ...rest
 }) => {
@@ -46,11 +48,18 @@ const TextField: React.FC<TextFieldProps> = ({
     setFocused(value !== "");
     if (onBlur) onBlur(event);
   };
+
   const status = error ? "error" : undefined;
   return (
     <>
       <div>
-        <div className={`floating-label-input mt-0`}>
+        <label
+          className={`${error ? "text-[#FF1F1F]" : "text-[#344054]"
+            } font-medium text-[14px] `}
+        >
+          {label && <div>{label}</div>}
+        </label>
+        <div className="">
           <Input
             id={id}
             type={type}
@@ -62,30 +71,24 @@ const TextField: React.FC<TextFieldProps> = ({
             onFocus={() => setFocused(true)}
             onBlur={handleBlur}
             disabled={disabled}
+            maxLength={maxLength}
             status={status}
             style={{
-              backgroundColor: "transparent",
-              borderRadius: "0px",
-              caretColor: "#D78C7C",
-              fontFamily: "inter-med",
-              border: "0px",
+              // backgroundColor: focused ? "#fff7f5" : "white",
+              borderRadius: "8px",
+              caretColor: "#002a36f1",
+              fontFamily: "Sora",
               boxShadow: "none",
-              padding: "10px 10px 5px 4px",
-              borderBottom: error ? "1px solid #FF1F1F" : "1px solid #505050",
+              fontSize: "14px",
+              fontWeight: 400,
+              height: '38px'
+              // color: "#B49C97",
             }}
             {...rest}
           />
-
-          <label
-            className={`${focused || value || shrink ? "focused" : ""} ${error ? "text-[#FF1F1F]" : "text-[#0B89CA]"
-              } flex items-end space-x-1`}
-          >
-            {label && <div>{label}</div>}
-            {/* {<span className="text-[#FF1F25]">*</span>} */}
-          </label>
         </div>
         {error && (
-          <div className=" text-[10px] text-[#FF1F1F] mt-[3px] absolute w-[30%]">
+          <div className=" text-[10px] text-[#FF1F1F] mt-[3px] absolute">
             {errorMessage}
           </div>
         )}
