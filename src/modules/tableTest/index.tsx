@@ -4,10 +4,17 @@ import { default as Button } from 'components/Buttons/Button';
 import ConfirmModal from 'components/modal/ModalConfirm';
 import Table from 'components/Table/index';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FiDownload } from "react-icons/fi";
 
 const Index = () => {
+    const { t } = useTranslation();
+    const validationSchema = t('Label', { returnObjects: true }) as {
+        password: string;
+    };
 
+    const password = validationSchema.password;
+    console.log(password);
     const dataSource = [
         {
             key: '1',

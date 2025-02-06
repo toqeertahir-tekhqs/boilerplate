@@ -5,7 +5,7 @@ import { AllRoutes } from "routes";
 import AuthRoute from "routes/AuthRoute";
 import { RouteConfig } from "type/types";
 import './App.less';
-
+import './i18n';
 function App() {
   return (
     <div className="h-[100vh]">

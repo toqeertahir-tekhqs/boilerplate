@@ -8,7 +8,8 @@ import { useNavigate } from 'react-router-dom';
 
 const MenuAntD = () => {
     type MenuItem = Required<MenuProps>['items'][number];
-    const [current, setCurrent] = useState('/');
+
+    const [current, setCurrent] = useState(location.pathname || '/table-test');
     const navigate = useNavigate()
 
     const onClick: MenuProps['onClick'] = (e) => {
@@ -39,9 +40,62 @@ const MenuAntD = () => {
         },
         {
             // label: 'Navigation Three - Submenu',
-            key: 'SubMenu',
+            key: 'SubMenuitems',
             icon: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
             children: [
+                {
+                    label: 'Smart Contracts',
+                    key: '/smart-contracts',
+                    onClick: () => {
+                        navigate('/smart-contracts')
+                    }
+                },
+                {
+                    label: 'KYC/AML Compliance',
+                    key: '/kyc-compliance',
+                    onClick: () => {
+                        navigate('/kyc-compliance')
+                    }
+                },
+                {
+                    label: 'Dispute',
+                    key: '/dispute',
+                    onClick: () => {
+                        navigate('/dispute')
+                    }
+                },
+            ],
+        },
+    ];
+
+    const items_md: MenuItem[] = [
+
+        {
+            // label: 'Navigation Three - Submenu',
+            key: 'SubMenuitems',
+            icon: <MoreOutlined style={{ transform: 'rotate(90deg)', marginTop: '12px' }} />,
+            children: [
+                {
+                    label: 'Dashboard',
+                    key: '/table-test',
+                    onClick: () => {
+                        navigate('/table-test')
+                    }
+                },
+                {
+                    label: 'Chit Fund Group',
+                    key: '/chit-fund-group',
+                    onClick: () => {
+                        navigate('/chit-fund-group')
+                    }
+                },
+                {
+                    label: 'Transactions',
+                    key: '/transactions',
+                    onClick: () => {
+                        navigate('/transactions')
+                    }
+                },
                 {
                     label: 'Smart Contracts',
                     key: '/smart-contracts',
@@ -72,7 +126,7 @@ const MenuAntD = () => {
                 <img src={brytAssets.BrytLogo} alt="Bryt Logo" />
             </div>
             <div className='max-md:hidden'>
-                <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items}
+                <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={window.innerWidth > 768 ? items : items_md}
                     theme="light"
                 />
             </div>
