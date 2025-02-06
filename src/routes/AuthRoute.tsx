@@ -9,8 +9,8 @@ const AuthRoute: React.FC<AuthRouteProps> = ({
   children,
   isPrivate,
 }) => {
-  const { token } = useSelector((state: RootState) => state.states);
-  // const token = 'sssss'
+  // const { token } = useSelector((state: RootState) => state.states);
+  const token = 'sssss'
   if (isPrivate) {
     if (!token) {
       return <Navigate to="/login" replace />;

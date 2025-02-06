@@ -40,8 +40,7 @@ const TextField: React.FC<TextFieldProps> = ({
 	onBlur,
 	size,
 	placeholder,
-	required,
-	shrink,
+	required = true,
 	error,
 	errorMessage,
 	...rest
@@ -59,7 +58,7 @@ const TextField: React.FC<TextFieldProps> = ({
 					className={`${error ? "text-[#FF1F1F]" : "text-[#344054]"
 						} font-medium text-[14px] `}
 				>
-					{label && <div>{label}</div>}
+					{label && <div>{label}<span className="text-[12px]">{required ? '*' : ''}</span></div>}
 				</label>
 				<div className={``}>
 					<Input.Password

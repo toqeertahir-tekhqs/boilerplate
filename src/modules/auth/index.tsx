@@ -62,7 +62,7 @@ const Login = () => {
                 password: password,
             };
             setLoading(true);
-            postRequestAuth("/login", payload)
+            postRequestAuth("/admin/adminLogin", payload)
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 .then((res: any) => {
                     if (res?.success) {
@@ -88,7 +88,7 @@ const Login = () => {
         <div className="flex items-center justify-center  h-[-webkit-fill-available]">
             <div className="bg-white p-6 rounded-lg shadow-md w-80">
                 <div className=" flex justify-center items-center flex-col w-full gap-5">
-                    <h2 className="text-2xl font-bold text-center mb-4">{mainHeader}</h2>
+                    <div className="text-2xl font-bold text-center mb-4">{mainHeader}</div>
                     <div className="mb-4 relative w-full">
                         <TextField
                             id="email"
@@ -96,6 +96,7 @@ const Login = () => {
                             type="email"
                             label={emailTitle}
                             size="large"
+
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
                             value={formik.values.email}
