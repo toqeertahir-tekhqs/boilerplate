@@ -1,8 +1,6 @@
 import Layout from 'layout';
 import React from "react";
-import { useSelector } from 'react-redux';
 import { Navigate } from "react-router-dom";
-import { RootState } from 'store/store';
 import { AuthRouteProps } from "type/types";
 
 const AuthRoute: React.FC<AuthRouteProps> = ({
