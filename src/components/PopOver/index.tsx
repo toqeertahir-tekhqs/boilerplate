@@ -17,7 +17,7 @@ const PopOver = ({
 							style={{
 								color: "#131416",
 							}}
-							className=" text-[12px] font-normal fontSora"
+							className="text-[14px] font-normal fontSora"
 						>
 							{content}
 						</span>
